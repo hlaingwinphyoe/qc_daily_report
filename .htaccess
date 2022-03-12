@@ -1,0 +1,15 @@
+RewriteEngine on
+
+#single file
+RewriteRule ^createDepartment$ department_create.php [L]
+RewriteRule ^editDepartment$ department_update.php [L]
+RewriteRule ^filterTest$ test_filter.php [L]
+RewriteRule ^filter$ filter.php [L]
+RewriteRule ^qcfilter$ qc_filter.php [L]
+RewriteRule ^testCreate$ test_create.php [L]
+RewriteRule ^testEdit$ test_update.php [L]
+RewriteRule ^addValue$ test_value_add.php [L]
+RewriteRule ^editValue$ test_value_edit.php [L]
+RewriteRule ^users$ user_list.php [L]
+RewriteRule ^register$ register.php [L]
+RewriteRule ^login$ login.php [L]
