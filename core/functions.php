@@ -229,9 +229,14 @@ function addDepartment(){
 
         $sql = "INSERT INTO departments (dept_name,user_id) VALUES ('$department','$user_id')";
 
-        if(runQuery($sql)){
+        $_SESSION['aspirate_report_status'] = "
+            <div class='alert alert-success alert-dismissible fade show'>
+            <i class='fa fa-check me-2'></i>
+            Department Created Successfully
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
             redirect("createDepartment");
-        }
     }
 
 }
@@ -268,6 +273,13 @@ function editDepartment(){
         $sql = "UPDATE departments SET dept_name='$newDepartment' WHERE id=$id";
 
         if(runQuery($sql)){
+            $_SESSION['add_value'] = "
+            <div class='alert alert-success alert-dismissible fade show'>
+            <i class='fa fa-check me-2'></i>
+            Department Name Updated Successfully!
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
             redirect("createDepartment");
         }
     }
@@ -303,6 +315,13 @@ function testCreate(){
         $sql = "INSERT INTO test (test_name,dept_id,user_id) VALUES ('$test','$department','$user_id')";
 
         if(runQuery($sql)){
+            $_SESSION['add_value'] = "
+            <div class='alert alert-success alert-dismissible fade show'>
+            <i class='fa fa-check me-2'></i>
+            Test Name Created Successfully!
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
             redirect("testCreate");
         }
     }
@@ -345,6 +364,13 @@ function testUpdate(){
         $sql = "UPDATE test SET test_name='$newTest' WHERE id=$id";
 
         if(runQuery($sql)){
+            $_SESSION['add_value'] = "
+            <div class='alert alert-success alert-dismissible fade show'>
+            <i class='fa fa-check me-2'></i>
+            Test Name Updated Successfully!
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
             redirect("testCreate");
         }
     }
@@ -387,6 +413,13 @@ function testValueAdd(){
 //        die($sql);
 
         if(runQuery($sql)){
+            $_SESSION['add_value'] = "
+            <div class='alert alert-success alert-dismissible fade show'>
+            <i class='fa fa-check me-2'></i>
+            Test Value Added Successfully!
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
             redirect("addValue");
         }
     }
@@ -429,6 +462,13 @@ function resultUpdate(){
 //        die($sql);
 
         if(runQuery($sql)){
+            $_SESSION['add_value'] = "
+            <div class='alert alert-success alert-dismissible fade show'>
+            <i class='fa fa-check me-2'></i>
+            Test Value Updated Successfully!
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
             redirect("index.php");
         }
     }
