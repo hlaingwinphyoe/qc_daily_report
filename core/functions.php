@@ -438,8 +438,15 @@ function results(){
 }
 
 function resultDelete($id){
-    $sql = "DELETE FROM testvalue WHERE id=$id";
-    return runQuery($sql);
+    if(runQuery($sql)){
+            $_SESSION['delete_value'] = "
+            <div class='alert alert-success alert-dismissible fade show'>
+            <i class='fa fa-check me-2'></i>
+            Test Value Deleted Successfully!
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
+        }
 }
 
 function resultUpdate(){
