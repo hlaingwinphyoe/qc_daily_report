@@ -229,7 +229,7 @@ function addDepartment(){
 
         $sql = "INSERT INTO departments (dept_name,user_id) VALUES ('$department','$user_id')";
 
-        $_SESSION['aspirate_report_status'] = "
+        $_SESSION['dept_create'] = "
             <div class='alert alert-success alert-dismissible fade show'>
             <i class='fa fa-check me-2'></i>
             Department Created Successfully
@@ -273,7 +273,7 @@ function editDepartment(){
         $sql = "UPDATE departments SET dept_name='$newDepartment' WHERE id=$id";
 
         if(runQuery($sql)){
-            $_SESSION['add_value'] = "
+            $_SESSION['dept_edit'] = "
             <div class='alert alert-success alert-dismissible fade show'>
             <i class='fa fa-check me-2'></i>
             Department Name Updated Successfully!
@@ -315,7 +315,7 @@ function testCreate(){
         $sql = "INSERT INTO test (test_name,dept_id,user_id) VALUES ('$test','$department','$user_id')";
 
         if(runQuery($sql)){
-            $_SESSION['add_value'] = "
+            $_SESSION['test_create'] = "
             <div class='alert alert-success alert-dismissible fade show'>
             <i class='fa fa-check me-2'></i>
             Test Name Created Successfully!
@@ -364,7 +364,7 @@ function testUpdate(){
         $sql = "UPDATE test SET test_name='$newTest' WHERE id=$id";
 
         if(runQuery($sql)){
-            $_SESSION['add_value'] = "
+            $_SESSION['test_edit'] = "
             <div class='alert alert-success alert-dismissible fade show'>
             <i class='fa fa-check me-2'></i>
             Test Name Updated Successfully!
@@ -462,7 +462,7 @@ function resultUpdate(){
 //        die($sql);
 
         if(runQuery($sql)){
-            $_SESSION['add_value'] = "
+            $_SESSION['update_value'] = "
             <div class='alert alert-success alert-dismissible fade show'>
             <i class='fa fa-check me-2'></i>
             Test Value Updated Successfully!
