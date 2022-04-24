@@ -37,11 +37,11 @@ require_once "core/functions.php";
             <div class="card shadow">
                 <div class="card-body">
                     <div class="row align-items-center">
-                        <div class="col-7">
+                        <div class="col-7 d-none d-lg-block">
                             <img src="<?php echo $url; ?>/assets/img/login.jpg" class="w-100" alt="">
                         </div>
-                        <div class="col-5">
-                            <div class="mt-4">
+                        <div class="col-12 col-lg-5">
+                            <div class="mt-4 d-none d-lg-block">
                                 <img src="<?php echo $url; ?>/assets/img/register_user.png" class="register-img mt-4" alt="">
                             </div>
                             <h4 class="text-center text-primary">
