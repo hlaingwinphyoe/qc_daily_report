@@ -73,12 +73,12 @@
                         </button>
                         <p style="font-size: 1.5rem;" class="text-white mb-0">To Do Lists</p>
                         <div class="dropdown">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="<?php echo $url; ?>/assets/img/<?php echo $_SESSION['user']['photo'] ?>" class="user-img shadow-sm" alt="">
                                 <span class="d-none d-md-inline"><?php echo $_SESSION['user']['name']; ?></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><span class="d-block d-md-none"><i class="fa fa-user me-2 text-primary"></i><?php echo $_SESSION['user']['name']; ?></span></li>
+                                <li><span class="d-block d-md-none dropdown-item"><i class="fa fa-user me-2 text-primary"></i><?php echo $_SESSION['user']['name']; ?></span></li>
                                 <li><a class="dropdown-item" href="<?php echo $url; ?>/log_out.php"><i class="fa fa-sign-out-alt me-2 text-danger"></i>Log Out</a></li>
                             </ul>
                         </div>
